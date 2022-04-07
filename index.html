@@ -1,0 +1,134 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<h><font size="6">ВикипедиЯ</font></h>
+<h1><b>Магическое число (программирование)</b></h1>
+<hr style="border: 2px solid black;">
+  <style>
+    body {
+    background: #FFFFFF;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+    }
+    p{
+    font:serif;
+    }
+    </style>
+    </head>
+<p>Материал из Википедии — свободной энциклопедии</p>
+<p>Понятие <b>«Магическое число»</b> в <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" target="_blank">программировании</a> имеет три значения:</p>
+<ul type="square">
+ <li>Сигнатура данных</li>
+ <li>Выделенные уникальные значения, которые не должны совпадать с другими значениями (например, <a href="https://ru.wikipedia.org/wiki/UUID" target="_blank">UUID</a>)</li>
+ <li>Плохая практика программирования.</li>
+</ul>
+<table style="background: #F9F9F9; border:3px #A9A9A9  ridge">
+<tr><th><h1><b><div align="left">Содержание <hr style="border: 2px solid black;"> </div></b></h1></th></tr>
+<tr><td><a href="#t1"><b>Сигнатура данных</b></a></td></tr>
+<tr><td><a href="#t2"><b>Плохая практика программирования.</a></td></tr>
+<tr><td> <p style="margin-left: 30px;"> <a href="#t3"><b>Магические числа и кроссплатформенность</b></a></p></td></tr>
+<tr><td> <p style="margin-left: 30px;"> <a href="#t4"><b>Числа, которые не являются магическими </b></a></p></td></tr>
+<tr><td><a href="#t5"><b>См. также</b></a></td></tr>
+<tr><td><a href="#t6"><b>Примечания</b></a></td></tr>
+</table>
+<h1 id="t1"><b>Сигнатура данных</b></h1>
+<hr style="border: 2px solid black;">
+<p align="justify"><b>Магическое число,</b> или <b>сигнатура,</b> — <a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE" target="_blank">целочисленная</a> или текстовая <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B0_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" target="_blank">константа</a>, используемая для
+однозначной 
+<a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_(%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B)" target="_blank">идентификации</a> <a href="https://ru.wikipedia.org/w/index.php?title=%D0%92%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81&action=edit&redlink=1" target="_blank">ресурса</a> или <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" target="_blank">данных</a>. Такое число само по себе не несёт никакого
+смысла и может вызвать недоумение, встретившись в <a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4" target="_blank">коде программы</a> без соответствующего</div>
+контекста или <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" target="_blank">комментария</a>, при этом попытка изменить его на другое, даже близкое по
+начению, может привести к абсолютно непредсказуемым последствиям. По этой причине
+подобные числа были <a href="https://ru.wikipedia.org/wiki/%D0%98%D1%80%D0%BE%D0%BD%D0%B8%D1%8F" target="_blank">иронично</a> названы <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B3%D0%B8%D1%8F" target="_blank">магическими</a>. В настоящее время это название прочно
+закрепилось как <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%80%D0%BC%D0%B8%D0%BD" target="_blank">термин</a>. Например, любой откомпилированный класс языка <a href="https://ru.wikipedia.org/wiki/Java" target="_blank">Java</a> начинается с
+<a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D0%B4%D1%86%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D1%87%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%81%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" target="_blank">шестнадцатеричного</a> «магического числа» 0xCAFEBABE. Второй широко известный пример —
+любой исполняемый файл ОС Microsoft Windows с расширением .exe начинается с последовательности байт 0x4D5A (что соответствует ASCII-символам MZ — инициалы Марка
+Збиковски, одного из создателей <a href="https://ru.wikipedia.org/wiki/MS-DOS" target="_blank">MS-DOS</a>). Менее известным примером является</a>
+неинициализированный указатель в Microsoft Visual С++ (начиная с 2005 версии Microsoft Visual
+Studio), который в режиме отладки имеет адрес 0xDEADBEEF.</p>
+<p>В UNIX-подобных операционных системах тип файла обычно определяется по сигнатуре файла,
+вне зависимости от расширения его названия. Для интерпретации сигнатуры файла в них
+редусматривается стандартная утилита file.</p>
+<h1 id="t2"><b>Плохая практика программирования</b></h1>
+<hr style="border: 2px solid black;">
+<div>Также «магическими числами» называют плохую практику программирования, когда в исходном
+тексте встречается числовое значение и неочевиден его смысл. Например, такой фрагмент,
+написанный на <a href="https://ru.wikipedia.org/wiki/Java" target="_blank">Java</a>, будет плохим:</div>
+<p style="border:3px #A9A9A9  dashed; border-width:2px 2px 2px 2px;"> <code> drawSprite(53, 320, 240);</code> </p>
+<p>Тому, кто не писал программу, трудно понять, что такое 53, 320 или 240. Но если этот код
+переписать, всё становится на свои места</p>
+<p style="border:3px #A9A9A9  dashed; border-width:2px 2px 2px 2px;"> <code><font color="006400">final</font> <font color="B22222">int</font> SCREEN_WIDTH = 640;</code><br>
+<code> <font color="006400">final</font> <font color="B22222">int</font> SCREEN_HEIGHT = 480;</code><br>
+<code><font color="006400">final</font> <font color="B22222">int</font> SCREEN_X_CENTER = SCREEN_WIDTH / 2;</code><br>
+<code><font color="006400">final</font> <font color="B22222">int</font> SCREEN_Y_CENTER = SCREEN_HEIGHT / 2;</code><br>
+<code><font color="006400">final</font> <font color="B22222">int</font> SPRITE_CROSSHAIR = 53;</code><br>
+...<br>
+<code>drawSprite(SPRITE_CROSSHAIR, SCREEN_X_CENTER, SCREEN_Y_CENTER);</code></p>
+
+<p align="justify">Теперь понятно: этот код выводит в центр экрана <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B9%D1%82_(%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0)" target="_blank">спрайт</a> — перекрестие прицела. В большинстве
+языков программирования все значения, используемые для таких констант, будут вычислены ещё
+на этапе компиляции и подставлены в места использования значений (свёртка констант).
+Поэтому такое изменение исходного текста не ухудшает быстродействие программы.</p>
+<p>Кроме того, магические числа — потенциальный источник ошибок в программе:</p>
+<ul type="square">
+ <li>Если одно и то же магическое число используется в программе более одного раза (или
+потенциально может использоваться), то его изменение потребует правок каждого
+вхождения (вместо одной правки значения именованной константы). Если будут
+исправлены не все вхождения, возникнет как минимум одна ошибка.</li>
+ <li>Как минимум в одном из вхождений магическое число может быть написано с ошибкой
+изначально, и это довольно сложно обнаружить.</li>
+ <li>Магическое число может зависеть от неявного параметра или другого магического
+числа. Если эти зависимости, не выделенные явно, не будут удовлетворены, возникнет
+как минимум одна ошибка.</li>
+ <li>При модификации вхождений одного магического числа можно ошибочно изменить
+другое магическое число, независимое, но имеющее то же числовое значение.</li>
+</ul>
+
+<h1 id="t3">Магические числа и кроссплатформенность</b></h1>
+<p align="justify">Иногда магические числа вредят <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C" target="_blank">кроссплатформенности</a> кода <a href="#t6"> <sup>[1]</sup><a>. Дело в том, что в <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)">Си</a> в 32- и 64-
+битных ОС гарантируется размер типов char, short и long long, в то время как размер
+int, long, size_t и ptrdiff_t может меняться (у первых двух — в зависимости от
+предпочтений разработчиков компилятора, у последних двух — в зависимости от разрядности
+целевой системы). В старом или неумело написанном коде могут встречаться «магические
+числа», означающие размер какого-либо типа — при переходе на машины с другой разрядностью
+они могут привести к трудноуловимым ошибкам.</p>
+<p>Например:</p>
+<p style="border:3px #A9A9A9  dashed; border-width:2px 2px 2px 2px;"> 
+<code><b><font color="006400">const</font></b> <font color="B22222">size_t</font> NUMBER_OF_ELEMENTS = 10; <br>
+long a[NUMBER_OF_ELEMENTS];<br>
+memset(a, 0, 10 * 4); <font color="006400"> <span style="padding: 0px 200px;">&nbsp;</span>// неправильно — подразумевается, что long <br>
+равен 4 байтам, используется магическое число элементов</font><br>
+memset(a, 0, NUMBER_OF_ELEMENTS * 4); <font color="006400"><span style="padding: 0px 143px;">&nbsp;</span>// неправильно — подразумевается, что long<br>
+равен 4 байтам</font><br>
+memset(a, 0, NUMBER_OF_ELEMENTS * <font color="006400">sizeof</font>(<font color="B22222">long</font>)); <font color="006400"><span style="padding: 0px 103px;">&nbsp;</span>// не совсем правильно — дублирование имени<br>
+типа (если изменится тип, то придется менять и здесь)</font><br>
+memset(a, 0, NUMBER_OF_ELEMENTS * <font color="006400">sizeof</font>(a[0])); <font color="006400"><span style="padding: 0px 103px;">&nbsp;</span>// правильно, оптимально для динамических<br>
+массивов ненулевого размера</font><br>
+memset(a, 0, <b><font color="006400">sizeof</font></b>(a)); <span style="padding: 0px 189px;">&nbsp;</span><font color="006400">// правильно, оптимально для статических<br>
+массивов</font></code>
+
+<h1 id="t4">Числа, которые не являются магическими</b></h1>
+<p>Не все числа требуется переносить в константы. Например, код на <a href="https://ru.wikipedia.org/wiki/Delphi_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)">Delphi</a>:</p>
+<p style="border:3px #A9A9A9  dashed; border-width:2px 2px 2px 2px;"> <b><code><font color="006400">for</font></b> i:=0 <b><font color="006400">to</font></b> Count-1 <b><font color="006400">do</font></b> ...</code></p>
+<p>Смысл чисел 0 и 1 понятен, и дальнейшего объяснения не требуется.</p>
+
+<h1 id="t5">См. также</b></h1>
+<hr style="border: 2px solid black;">
+<ul type="square">
+ <li> <a href="https://ru.wikipedia.org/wiki/Hexspeak" target="_blank"> Hexspeak</a></li>
+ <li> <a href="https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9_%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D1%8C" target="_blank">Быстрый обратный квадратный корень</a></li>
+</ul>
+<h1 id="t6">Примечания</b></h1>
+1. 20 ловушек переноса кода на C++ на 64-битную платформу (http://www.viva64.com/cont
+ent/articles/64-bit-development/?f=20_issues_of_porting_C++_code_on_the_64-bit_platform
+_rus.html&lang=ru&content=64-bit-development#IDA3IWXD)
+<hr>
+
+
+</body>
+</html>
+
